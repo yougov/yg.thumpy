@@ -2,7 +2,7 @@ import setuptools
 
 setup_params = dict(
     name='yg.thumpy',
-    version='0.3.1',
+    use_scm_version=True,
     author='YouGov, Plc.',
     author_email='dev@yougov.com',
     packages=setuptools.find_packages(),
@@ -12,6 +12,9 @@ setup_params = dict(
         'boto==2.1.0',
         'gevent==0.13.6',
         'pyyaml==3.10',
+    ],
+    setup_requires=[
+        'setuptools_scm',
     ],
     entry_points = {
         'console_scripts': [
