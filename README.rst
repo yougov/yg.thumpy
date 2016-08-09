@@ -5,6 +5,8 @@ Thumpy is a Python web service that crops and scales images.  It doesn't store
 anything.  It's meant to be used as an origin server sitting behind a CDN such
 as Amazon CloudFront.
 
+Yg.thumpy is the YouGov fork of Thumpy.
+
 Configuration
 =============
 
@@ -17,7 +19,7 @@ Interface
 Thumpy serves images using the same paths as their storage location on S3.
 Conversion parameters are specified in the query string, using an interface
 inspired by `TimThumb
-<http://www.binarymoon.co.uk/projects/timthumb/>`_.  
+<http://www.binarymoon.co.uk/projects/timthumb/>`_.
 
 examples:
 
@@ -63,7 +65,7 @@ Minimum 3 parameters required:
 - Left offset (i.e. zcl=100px)
 - Width or Hight of the output crop from the offsets. If only one provided the other will automatically be assigned the other's value.
 
-The mask should be applied to the original image which means there is no scaling but only masking. 
+The mask should be applied to the original image which means there is no scaling but only masking.
 
 See: Scaling (Post processing) to get the scaled mask/crop.
 
@@ -89,7 +91,7 @@ This is to workaround Amazon Cloudfront dropping the URL query string when makin
 	http://mycloudfrontdist.somewhere/w=100/path/to/image/castle.jpg
 
 For the original, unaltered image, place an "o" where the query string would go, like this::
-	
+
 	http://mycloudfrontdist.somewhere/o/path/to/image/castle.jpg
 
 
