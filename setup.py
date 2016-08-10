@@ -23,7 +23,7 @@ setup_params = dict(
     },
     url='https://github.com/yougov/yg.thumpy',
     description=(
-        'A Python web server that uses PIL to dynamically scale, '
+        'A Python web server that uses Pillow to dynamically scale, '
         'crop, transform and serve images from S3 or the local '
         'filesystem'
     ),
